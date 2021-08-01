@@ -1,4 +1,4 @@
-DOCKER_REPO_NAME=mikebild
+DOCKER_REPO_NAME=centraldasmilhas
 DOCKER_IMAGE_NAME=$(shell basename $(CURDIR))
 BATS_TESTS=$(wildcard *.bats */*.bats)
 
