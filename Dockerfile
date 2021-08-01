@@ -2,16 +2,19 @@ FROM alpine:edge
 
 LABEL name="aws-cdk-js-github-action"
 LABEL version="1.0.0"
-LABEL repository="https://github.com/mikebild/aws-cdk-js-github-action"
-LABEL homepage="https://github.com/mikebild/aws-cdk-js-github-action"
+LABEL repository="https://github.com/centraldasmilhas/aws-cdk-js-github-action"
+LABEL homepage="https://github.com/centraldasmilhas/aws-cdk-js-github-action"
 
 LABEL "com.github.actions.name"="aws-cdk-js-github-action"
 LABEL "com.github.actions.description"="GitHub Action using AWS CDK for JavaScript"
 LABEL "com.github.actions.icon"="box"
 LABEL "com.github.actions.color"="blue"
 
-LABEL "maintainer"="Mike Bild <mike.bild@googlemail.com>"
+LABEL "maintainer"="Daniel Costa <daniel.henrique.sc@gmail.com>"
 
+RUN apk update && \
+    apk add --update nodejs  && \
+    npm install newman --global
 RUN apk --no-cache add nodejs npm
 RUN npm install -g aws-cdk
 
