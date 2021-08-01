@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 LABEL name="aws-cdk-js-github-action"
-LABEL version="1.0.0"
+LABEL version="1.0.2"
 LABEL repository="https://github.com/centraldasmilhas/aws-cdk-js-github-action"
 LABEL homepage="https://github.com/centraldasmilhas/aws-cdk-js-github-action"
 
@@ -12,9 +12,6 @@ LABEL "com.github.actions.color"="blue"
 
 LABEL "maintainer"="Daniel Costa <daniel.henrique.sc@gmail.com>"
 
-RUN apk update && \
-    apk add --update nodejs  && \
-    npm install newman --global
 RUN apk --no-cache add nodejs npm
 RUN npm install -g aws-cdk
 
