@@ -1,4 +1,4 @@
-FROM alpine:edge
+FROM ubuntu:latest
 
 LABEL name="aws-cdk-js-github-action"
 LABEL version="1.0.0"
