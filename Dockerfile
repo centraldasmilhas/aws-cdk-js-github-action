@@ -12,7 +12,7 @@ LABEL "com.github.actions.color"="blue"
 
 LABEL "maintainer"="Mike Bild <mike.bild@googlemail.com>"
 
-RUN apk --no-cache add nodejs nodejs-npm
+RUN apk --no-cache add nodejs npm
 RUN npm install -g aws-cdk
 
 COPY entrypoint.sh /entrypoint.sh
